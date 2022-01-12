@@ -8,6 +8,7 @@ import {
 import { RootTabScreenProps } from '../types';
 
 import { SubjectClass } from '../components/Calculator/SubjectClass';
+import { Subject } from '../components/Calculator/Subject';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
@@ -18,6 +19,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
     >
       <VStack space={5} alignItems="center">
         <SubjectClass/>
+        <Subject/>
       </VStack>
     </Center>
   );
