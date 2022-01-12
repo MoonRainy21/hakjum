@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { initialState, SubjectType } from "./utils"
+import { initialState} from "./utils"
 
 export const subjectSlice = createSlice({
     name: 'subject',
     initialState,
     reducers: {
-        setSubject: (state, action: PayloadAction<SubjectType>) => {
+        setSubject: (state, action: PayloadAction<string>) => {
             state.currentSubject = action.payload
         }
     }

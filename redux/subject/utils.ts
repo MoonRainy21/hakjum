@@ -1,9 +1,8 @@
-export type SubjectType = "" | "물리I" | "물리II"
 
-export interface PathState {
-    currentSubject: SubjectType
+export interface SubjectState {
+    currentSubject: string
 }
 
-export const initialState: PathState = {
+export const initialState: SubjectState = {
     currentSubject: ""
 }
