@@ -62,8 +62,8 @@ function BottomTabNavigator() {
         name="TabOne"
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Hi',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: '학점계산',
+          tabBarIcon: ({ color }) => <TabBarIcon name="calculator" color={color} />,
           headerShown: false
         })}
       />
@@ -71,8 +71,8 @@ function BottomTabNavigator() {
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: '학점목록',
+          tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
           headerShown: false,
         }}
       />
