@@ -28,6 +28,7 @@ const linking: LinkingOptions<RootStackParamList> = {
         },
       },
       NotFound: '*',
+      CalculateScreen: 'calculate',
     },
   },
 };

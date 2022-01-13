@@ -43,7 +43,12 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
           <Input placeholder="기말고사 점수입력" />
         </FormControl>
         <HStack space={10} alignItems='left'>
-          <Button bg='black'>
+          <Button
+            bg='black'
+            onPress={() => {
+              navigation.navigate('CalculateScreen')
+            }}
+          >
             조회하기!
           </Button>
         </HStack>
