@@ -1,4 +1,4 @@
-import { ISubject } from "../redux/subject/utils"
+import { ISubject } from "../../redux/subject/utils"
 
 export const DBSubject : ISubject[] = [
     {

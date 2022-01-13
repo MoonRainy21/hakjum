@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { initialState } from "./utils"
 
-import { DBSubject } from "../../SubjectData";
+import { DBSubject } from "../../utils/SubjectData";
 
 export const subjectSlice = createSlice({
     name: 'subject',

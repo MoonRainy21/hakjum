@@ -2,13 +2,14 @@ import { FormControl, Select, CheckIcon } from "native-base"
 import React from "react"
 
 import { useDispatch, useSelector } from "react-redux"
-import { selectSubjectClass } from "../../redux/rootReducer"
+import { selectSubject, selectSubjectClass } from "../../redux/rootReducer"
 import { setSubject } from "../../redux/subject/subjectSlice"
-import { DBSubject } from "../../SubjectData"
+import { DBSubject } from "../../utils/SubjectData"
 
 export function Subject() {
   const dispatch = useDispatch();
   const subjectclass = useSelector(selectSubjectClass);
+  const subject = useSelector(selectSubject);
   return (
     <FormControl isRequired>
       <FormControl.Label>과목</FormControl.Label>
@@ -25,6 +26,7 @@ export function Subject() {
           dispatch(setSubject(itemValue))
         }}
         isDisabled={subjectclass === ""}
+        selectedValue={subject.name}
       >
         {renderSubjects(subjectclass)}
       </Select>

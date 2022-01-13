@@ -4,7 +4,9 @@ import {
   Center,
   FormControl,
   VStack,
-  Input
+  Input,
+  HStack,
+  Button
 } from 'native-base';
 
 import { RootTabScreenProps } from '../types';
@@ -15,6 +17,7 @@ import { Subject } from '../components/Calculator/Subject';
 import { useSelector } from 'react-redux';
 
 import { selectSubject, selectSubjectClass } from '../redux/rootReducer';
+import { ResetForm } from '../utils/ResetForm';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   const currentSubject = useSelector(selectSubject);
@@ -33,12 +36,17 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         </FormControl>
         <FormControl>
           <FormControl.Label>중간고사({currentSubject.midterm}%)</FormControl.Label>
-          <Input placeholder="수행평가 점수입력" />
+          <Input placeholder="중간고사 점수입력" />
         </FormControl>
         <FormControl>
-          <FormControl.Label>수행평가({currentSubject.final}%)</FormControl.Label>
-          <Input placeholder="수행평가 점수입력" />
+          <FormControl.Label>기말고사({currentSubject.final}%)</FormControl.Label>
+          <Input placeholder="기말고사 점수입력" />
         </FormControl>
+        <HStack space={10} alignItems='left'>
+          <Button bg='black'>
+            조회하기!
+          </Button>
+        </HStack>
       </VStack>
     </Center>
   );

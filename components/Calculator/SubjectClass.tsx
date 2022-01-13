@@ -1,12 +1,14 @@
 import { FormControl, Select, CheckIcon } from "native-base"
 import React from "react"
 
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { selectSubjectClass } from "../../redux/rootReducer"
 import { setSubjectClass } from "../../redux/subjectClass/subjectClassSlice"
 import { SubjectClassification } from "../../redux/subjectClass/utils"
 
 export function SubjectClass() {
   const dispatch = useDispatch();
+  const subjectclass = useSelector(selectSubjectClass);
   return (
     <FormControl isRequired>
       <FormControl.Label>과목분류</FormControl.Label>
@@ -24,6 +26,7 @@ export function SubjectClass() {
             dispatch(setSubjectClass(itemValue))
           }
         }}
+        selectedValue={subjectclass}
       >
         <Select.Item label="물리" value="물리" />
         <Select.Item label="수학" value="수학" />
