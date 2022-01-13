@@ -1,12 +1,13 @@
-interface ISubject {
-    subjectclass: string
-    name: string
-    workout: number
-    midterm: number
-    final: number
-}
+import { ISubject } from "../redux/subject/utils"
 
 export const DBSubject : ISubject[] = [
+    {
+        subjectclass: "",
+        name: "",
+        workout: 0,
+        midterm: 0,
+        final: 0
+    },
     {
         subjectclass: "물리",
         name: "물리I",

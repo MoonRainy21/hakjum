@@ -4,6 +4,7 @@ import persistReducer from "redux-persist/es/persistReducer";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import subjectClassReducer from './subjectClass/subjectClassSlice';
 import subjectReducer from './subject/subjectSlice';
+import { ISubject } from "./subject/utils";
 
 const reducers = combineReducers({
     subjectClass: subjectClassReducer,
@@ -18,6 +19,6 @@ const persistConfig = {
 }
 
 export const selectSubjectClass = (state:any) => state.subjectClass.currentSubjectClass
-export const selectSubject = (state:any) => state.subject.currentSubject
+export const selectSubject = (state:any) => state.subject
 
 export const rootReducer = persistReducer(persistConfig, reducers)

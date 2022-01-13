@@ -4,7 +4,7 @@ import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { selectSubjectClass } from "../../redux/rootReducer"
 import { setSubject } from "../../redux/subject/subjectSlice"
-import { DBSubject } from "./SubjectData"
+import { DBSubject } from "../../SubjectData"
 
 export function Subject() {
   const dispatch = useDispatch();
